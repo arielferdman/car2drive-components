@@ -1,93 +1,56 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 10px 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-right header-top-right header-top-right header-top-right header-top-right header-top-right header-top-right header-top-right header-top-right"
-    "header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-left header-top-right header-top-right header-top-right header-top-right header-top-right header-top-right header-top-right header-top-right header-top-right"
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . . . . . . .";
+  grid-template-areas: "header-top-left header-top-right";
 }
 
 .header-top-left {
   display: grid;
-  grid-template-columns: repeat(4, minmax(80px, 100px));
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "login cart language search"
-    "login cart language search"
-    "login cart language search";
+  grid-template-areas: "login Cart Language Search";
   grid-area: header-top-left;
-  place-items: center;
 }
 
 .login {
   grid-area: login;
-  color: white;
 }
 
-.cart {
-  grid-area: cart;
-  color: white;
+.Cart {
+  grid-area: Cart;
 }
 
-.language {
-  grid-area: language;
-  color: white;
+.Language {
+  grid-area: Language;
 }
 
-.search {
-  grid-area: search;
-  color: white;
+.Search {
+  grid-area: Search;
 }
 
 .header-top-right {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "phone email hours"
-    "phone email hours"
-    "phone email hours";
+  grid-template-areas: "contact email hours";
   grid-area: header-top-right;
-  place-items: center;
 }
 
-.hours {
-  grid-area: hours;
-  color: white;
-  direction: rtl;
+.contact {
+  grid-area: contact;
 }
 
 .email {
   grid-area: email;
-  color: white;
-  direction: rtl;
 }
 
-.phone {
-  grid-area: phone;
-  color: white;
-  direction: rtl;
-}
-
-* {
-  background: black;
+.hours {
+  grid-area: hours;
 }
